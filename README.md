@@ -1,23 +1,50 @@
-[![NuGet Version](https://img.shields.io/nuget/v/StoreKit2)](https://www.nuget.org/packages/StoreKit2)
+# MAUI StoreKit2 IAP Module (Enhanced)
 
-# MAUI StoreKit2 IAP Module
-
-A .NET MAUI binding library that provides seamless integration with iOS StoreKit2 In-App Purchase functionality.
+A .NET MAUI binding library that provides seamless integration with iOS StoreKit2 In-App Purchase functionality, extended with advanced subscription handling and entitlement management.
 
 ## Overview
 
 This library enables .NET MAUI applications to leverage Apple's modern StoreKit2 framework for handling in-app purchases on iOS. It provides a C# wrapper around the native StoreKit2 APIs, making it easy to integrate IAP functionality into your cross-platform MAUI applications.
 
+This fork extends the original library with:
+
+- Accurate subscription expiration handling
+- Trial detection support
+- Subscription renewal state (grace period, billing retry, etc.)
+- Improved restore and entitlement logic
+
+---
+
+## 🚀 New Features (Fork Enhancements)
+
+- ✅ **Real Expiration Date**: Uses StoreKit2 `expirationDate` instead of manual calculations
+- ✅ **Trial Detection**: Detect introductory offers and free trials
+- ✅ **Subscription State Awareness**:
+  - Active
+  - Expired
+  - Grace Period
+  - Billing Retry
+  - Revoked
+- ✅ **Current Entitlements Support**: Based on `Transaction.currentEntitlements`
+- ✅ **Improved Restore Logic**: Reliable multi-device restore
+- ✅ **Better Offline Handling**: Designed for cache + StoreKit sync model
+
+---
+
 ## Features
 
-- ✅ **Product Information Retrieval**: Fetch product details from the App Store
-- ✅ **Purchase Processing**: Handle consumable, non-consumable, and subscription purchases
-- ✅ **Purchase Restoration**: Restore previous purchases for users
-- ✅ **Transaction Verification**: Built-in transaction verification using StoreKit2
-- ✅ **Purchase Status Checking**: Check the current entitlement status of products
-- ✅ **Async/Await Support**: Modern async programming patterns
-- ✅ **Delegate Pattern**: Event-driven callbacks for purchase events
-- ✅ **iOS 15+ Support**: Takes advantage of the latest StoreKit2 features
+- ✅ **Product Information Retrieval**
+- ✅ **Purchase Processing**
+- ✅ **Purchase Restoration**
+- ✅ **Transaction Verification**
+- ✅ **Purchase Status Checking**
+- ✅ **Subscription Expiration Tracking**
+- ✅ **Trial & Intro Offer Detection**
+- ✅ **Async/Await Support**
+- ✅ **Delegate Pattern**
+- ✅ **iOS 15+ Support**
+
+---
 
 ## Requirements
 
@@ -219,6 +246,60 @@ Represents a completed transaction.
 - `RevocationDate`: Date of revocation (if applicable)
 - `RevocationReason`: Reason for revocation (if applicable)
 
+
+### 🔹 Subscription Lifecycle
+
+Subscriptions are handled using real StoreKit2 data:
+
+- Trial period (managed by Apple)
+- Active subscription
+- Grace period (payment issues)
+- Billing retry
+- Expired / revoked
+
+
+## API Additions
+
+### PaymentTransaction (Extended)
+
+New properties available:
+
+- `ExpirationDate`
+- `OriginalTransactionId`
+- `OriginalPurchaseDate`
+- `IsIntroOffer`
+- `OwnershipType`
+
+
+### PaymentSubscriptionStatus (NEW)
+
+Represents the real subscription state.
+
+#### Properties
+
+- `ProductId`
+- `RenewalState` (subscribed, expired, gracePeriod, billingRetry, revoked)
+- `ExpirationDate`
+- `IsAutoRenewEnabled`
+- `IsInBillingRetry`
+- `IsInGracePeriod`
+
+
+## New Methods
+
+### Get Subscription Status
+
+```csharp
+paymentManager.GetSubscriptionStatus(productId, (status) =>
+{
+    if (status != null)
+    {
+        Console.WriteLine($"State: {status.RenewalState}");
+        Console.WriteLine($"Expires: {status.ExpirationDate}");
+    }
+});
+```
+
 ## Product Types
 
 The library supports all StoreKit2 product types:
@@ -227,6 +308,7 @@ The library supports all StoreKit2 product types:
 - **Non-Consumable**: Products that are purchased once
 - **Auto-Renewable**: Subscriptions that renew automatically
 - **Non-Renewable**: Subscriptions that don't renew automatically
+
 
 ## Error Handling
 
