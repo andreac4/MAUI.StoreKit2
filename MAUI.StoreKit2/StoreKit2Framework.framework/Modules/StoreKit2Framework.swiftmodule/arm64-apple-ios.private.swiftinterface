@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
-// swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name StoreKit2Framework
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name StoreKit2Framework
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import Foundation
 import StoreKit
 import Swift
@@ -29,12 +29,32 @@ import _SwiftConcurrencyShims
 @available(iOS 15.0, *)
 @objc public class PaymentTransaction : ObjectiveC.NSObject {
   @objc final public let transactionId: Swift.String
+  @objc final public let originalTransactionId: Swift.String
   @objc final public let productId: Swift.String
   @objc final public let purchaseDate: Foundation.Date
+  @objc final public let originalPurchaseDate: Foundation.Date
+  @objc final public let expirationDate: Foundation.Date?
   @objc final public let isUpgraded: Swift.Bool
   @objc final public let revocationDate: Foundation.Date?
   @objc final public let revocationReason: Swift.String?
+  @objc final public let isIntroOffer: Swift.Bool
+  @objc final public let ownershipType: Swift.String
   public init(transaction: StoreKit.Transaction)
+  @objc deinit
+}
+@available(iOS 15.0, *)
+@objc public class PaymentSubscriptionStatus : ObjectiveC.NSObject {
+  @objc final public let productId: Swift.String
+  @objc final public let renewalState: Swift.String
+  @objc final public let expirationDate: Foundation.Date?
+  @objc final public let isAutoRenewEnabled: Swift.Bool
+  @objc final public let isInBillingRetry: Swift.Bool
+  @objc final public let isInGracePeriod: Swift.Bool
+  @objc final public let transactionId: Swift.String?
+  @objc final public let willAutoRenewProductId: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(productId: Swift.String, renewalState: Swift.String, expirationDate: Foundation.Date?, isAutoRenewEnabled: Swift.Bool, isInBillingRetry: Swift.Bool, isInGracePeriod: Swift.Bool, transactionId: Swift.String?, willAutoRenewProductId: Swift.String?)
+  #endif
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 15.0, *)
@@ -42,10 +62,24 @@ import _SwiftConcurrencyShims
   @objc public static let shared: StoreKit2Framework.PaymentManager
   @objc weak public var delegate: (any StoreKit2Framework.PaymentManagerDelegate)?
   @objc deinit
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func requestProducts(productIds: [Swift.String], completion: @escaping (Swift.Bool, Swift.String?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func purchaseProduct(productId: Swift.String, appAccountToken: Foundation.UUID? = nil, completion: @escaping (Swift.Bool, Swift.String?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func restorePurchases(completion: @escaping (Swift.Bool, Swift.String?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getProduct(productId: Swift.String) -> StoreKit2Framework.PaymentProduct?
+  #endif
   @objc public func getAllProducts() -> [StoreKit2Framework.PaymentProduct]
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func checkPurchaseStatus(productId: Swift.String, completion: @escaping (Swift.Bool, StoreKit2Framework.PaymentTransaction?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func getSubscriptionStatus(productId: Swift.String, completion: @escaping (StoreKit2Framework.PaymentSubscriptionStatus?) -> Swift.Void)
+  #endif
+  @objc public func getAllSubscriptionStatuses(completion: @escaping ([StoreKit2Framework.PaymentSubscriptionStatus]) -> Swift.Void)
 }

@@ -571,6 +571,7 @@
         "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentProduct",
         "mangledName": "$s18StoreKit2Framework14PaymentProductC",
         "moduleName": "StoreKit2Framework",
+        "isOpen": true,
         "intro_iOS": "15.0",
         "declAttributes": [
           "AccessControl",
@@ -704,6 +705,56 @@
           },
           {
             "kind": "Var",
+            "name": "originalTransactionId",
+            "printedName": "originalTransactionId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentTransaction(py)originalTransactionId",
+            "mangledName": "$s18StoreKit2Framework18PaymentTransactionC08originalE2IdSSvp",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentTransaction(im)originalTransactionId",
+                "mangledName": "$s18StoreKit2Framework18PaymentTransactionC08originalE2IdSSvg",
+                "moduleName": "StoreKit2Framework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "productId",
             "printedName": "productId",
             "children": [
@@ -792,6 +843,122 @@
                 "declKind": "Accessor",
                 "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentTransaction(im)purchaseDate",
                 "mangledName": "$s18StoreKit2Framework18PaymentTransactionC12purchaseDate10Foundation0G0Vvg",
+                "moduleName": "StoreKit2Framework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "originalPurchaseDate",
+            "printedName": "originalPurchaseDate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentTransaction(py)originalPurchaseDate",
+            "mangledName": "$s18StoreKit2Framework18PaymentTransactionC20originalPurchaseDate10Foundation0H0Vvp",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentTransaction(im)originalPurchaseDate",
+                "mangledName": "$s18StoreKit2Framework18PaymentTransactionC20originalPurchaseDate10Foundation0H0Vvg",
+                "moduleName": "StoreKit2Framework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "expirationDate",
+            "printedName": "expirationDate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentTransaction(py)expirationDate",
+            "mangledName": "$s18StoreKit2Framework18PaymentTransactionC14expirationDate10Foundation0G0VSgvp",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentTransaction(im)expirationDate",
+                "mangledName": "$s18StoreKit2Framework18PaymentTransactionC14expirationDate10Foundation0G0VSgvg",
                 "moduleName": "StoreKit2Framework",
                 "implicit": true,
                 "declAttributes": [
@@ -985,6 +1152,106 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "isIntroOffer",
+            "printedName": "isIntroOffer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentTransaction(py)isIntroOffer",
+            "mangledName": "$s18StoreKit2Framework18PaymentTransactionC12isIntroOfferSbvp",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentTransaction(im)isIntroOffer",
+                "mangledName": "$s18StoreKit2Framework18PaymentTransactionC12isIntroOfferSbvg",
+                "moduleName": "StoreKit2Framework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ownershipType",
+            "printedName": "ownershipType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentTransaction(py)ownershipType",
+            "mangledName": "$s18StoreKit2Framework18PaymentTransactionC13ownershipTypeSSvp",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentTransaction(im)ownershipType",
+                "mangledName": "$s18StoreKit2Framework18PaymentTransactionC13ownershipTypeSSvg",
+                "moduleName": "StoreKit2Framework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(transaction:)",
@@ -1042,6 +1309,661 @@
         "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentTransaction",
         "mangledName": "$s18StoreKit2Framework18PaymentTransactionC",
         "moduleName": "StoreKit2Framework",
+        "isOpen": true,
+        "intro_iOS": "15.0",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "Available"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PaymentSubscriptionStatus",
+        "printedName": "PaymentSubscriptionStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "productId",
+            "printedName": "productId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(py)productId",
+            "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC9productIdSSvp",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(im)productId",
+                "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC9productIdSSvg",
+                "moduleName": "StoreKit2Framework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "renewalState",
+            "printedName": "renewalState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(py)renewalState",
+            "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC12renewalStateSSvp",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(im)renewalState",
+                "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC12renewalStateSSvg",
+                "moduleName": "StoreKit2Framework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "expirationDate",
+            "printedName": "expirationDate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(py)expirationDate",
+            "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC14expirationDate10Foundation0H0VSgvp",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(im)expirationDate",
+                "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC14expirationDate10Foundation0H0VSgvg",
+                "moduleName": "StoreKit2Framework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isAutoRenewEnabled",
+            "printedName": "isAutoRenewEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(py)isAutoRenewEnabled",
+            "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC18isAutoRenewEnabledSbvp",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(im)isAutoRenewEnabled",
+                "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC18isAutoRenewEnabledSbvg",
+                "moduleName": "StoreKit2Framework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isInBillingRetry",
+            "printedName": "isInBillingRetry",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(py)isInBillingRetry",
+            "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC16isInBillingRetrySbvp",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(im)isInBillingRetry",
+                "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC16isInBillingRetrySbvg",
+                "moduleName": "StoreKit2Framework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isInGracePeriod",
+            "printedName": "isInGracePeriod",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(py)isInGracePeriod",
+            "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC15isInGracePeriodSbvp",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(im)isInGracePeriod",
+                "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC15isInGracePeriodSbvg",
+                "moduleName": "StoreKit2Framework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transactionId",
+            "printedName": "transactionId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(py)transactionId",
+            "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC13transactionIdSSSgvp",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(im)transactionId",
+                "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC13transactionIdSSSgvg",
+                "moduleName": "StoreKit2Framework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "willAutoRenewProductId",
+            "printedName": "willAutoRenewProductId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(py)willAutoRenewProductId",
+            "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC22willAutoRenewProductIdSSSgvp",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(im)willAutoRenewProductId",
+                "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC22willAutoRenewProductIdSSSgvg",
+                "moduleName": "StoreKit2Framework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(productId:renewalState:expirationDate:isAutoRenewEnabled:isInBillingRetry:isInGracePeriod:transactionId:willAutoRenewProductId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PaymentSubscriptionStatus",
+                "printedName": "StoreKit2Framework.PaymentSubscriptionStatus",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18StoreKit2Framework25PaymentSubscriptionStatusC9productId12renewalState14expirationDate18isAutoRenewEnabled0M14InBillingRetry0mQ11GracePeriod011transactionH004willno7ProductH0ACSS_SS10Foundation0L0VSgS3bSSSgAPtcfc",
+            "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC9productId12renewalState14expirationDate18isAutoRenewEnabled0M14InBillingRetry0mQ11GracePeriod011transactionH004willno7ProductH0ACSS_SS10Foundation0L0VSgS3bSSSgAPtcfc",
+            "moduleName": "StoreKit2Framework",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PaymentSubscriptionStatus",
+                "printedName": "StoreKit2Framework.PaymentSubscriptionStatus",
+                "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus(im)init",
+            "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusCACycfc",
+            "moduleName": "StoreKit2Framework",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus",
+        "mangledName": "$s18StoreKit2Framework25PaymentSubscriptionStatusC",
+        "moduleName": "StoreKit2Framework",
+        "isOpen": true,
         "intro_iOS": "15.0",
         "declAttributes": [
           "AccessControl",
@@ -1191,6 +2113,7 @@
             "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentManager(py)delegate",
             "mangledName": "$s18StoreKit2Framework14PaymentManagerC8delegateAA0dE8Delegate_pSgvp",
             "moduleName": "StoreKit2Framework",
+            "isOpen": true,
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
@@ -1226,6 +2149,7 @@
                 "mangledName": "$s18StoreKit2Framework14PaymentManagerC8delegateAA0dE8Delegate_pSgvg",
                 "moduleName": "StoreKit2Framework",
                 "implicit": true,
+                "isOpen": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -1261,6 +2185,7 @@
                 "mangledName": "$s18StoreKit2Framework14PaymentManagerC8delegateAA0dE8Delegate_pSgvs",
                 "moduleName": "StoreKit2Framework",
                 "implicit": true,
+                "isOpen": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -1282,6 +2207,7 @@
                 "mangledName": "$s18StoreKit2Framework14PaymentManagerC8delegateAA0dE8Delegate_pSgvM",
                 "moduleName": "StoreKit2Framework",
                 "implicit": true,
+                "isOpen": true,
                 "intro_iOS": "15.0",
                 "declAttributes": [
                   "Available"
@@ -1358,6 +2284,7 @@
             "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentManager(im)requestProductsWithProductIds:completion:",
             "mangledName": "$s18StoreKit2Framework14PaymentManagerC15requestProducts10productIds10completionySaySSG_ySb_SSSgtctF",
             "moduleName": "StoreKit2Framework",
+            "isOpen": true,
             "objc_name": "requestProductsWithProductIds:completion:",
             "declAttributes": [
               "AccessControl",
@@ -1441,6 +2368,7 @@
             "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentManager(im)purchaseProductWithProductId:appAccountToken:completion:",
             "mangledName": "$s18StoreKit2Framework14PaymentManagerC15purchaseProduct9productId15appAccountToken10completionySS_10Foundation4UUIDVSgySb_SSSgtctF",
             "moduleName": "StoreKit2Framework",
+            "isOpen": true,
             "objc_name": "purchaseProductWithProductId:appAccountToken:completion:",
             "declAttributes": [
               "AccessControl",
@@ -1502,6 +2430,7 @@
             "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentManager(im)restorePurchasesWithCompletion:",
             "mangledName": "$s18StoreKit2Framework14PaymentManagerC16restorePurchases10completionyySb_SSSgtc_tF",
             "moduleName": "StoreKit2Framework",
+            "isOpen": true,
             "objc_name": "restorePurchasesWithCompletion:",
             "declAttributes": [
               "AccessControl",
@@ -1539,6 +2468,7 @@
             "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentManager(im)getProductWithProductId:",
             "mangledName": "$s18StoreKit2Framework14PaymentManagerC10getProduct9productIdAA0dG0CSgSS_tF",
             "moduleName": "StoreKit2Framework",
+            "isOpen": true,
             "objc_name": "getProductWithProductId:",
             "declAttributes": [
               "AccessControl",
@@ -1570,6 +2500,7 @@
             "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentManager(im)getAllProducts",
             "mangledName": "$s18StoreKit2Framework14PaymentManagerC14getAllProductsSayAA0D7ProductCGyF",
             "moduleName": "StoreKit2Framework",
+            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -1636,10 +2567,117 @@
             "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentManager(im)checkPurchaseStatusWithProductId:completion:",
             "mangledName": "$s18StoreKit2Framework14PaymentManagerC19checkPurchaseStatus9productId10completionySS_ySb_AA0D11TransactionCSgtctF",
             "moduleName": "StoreKit2Framework",
+            "isOpen": true,
             "objc_name": "checkPurchaseStatusWithProductId:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSubscriptionStatus",
+            "printedName": "getSubscriptionStatus(productId:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(StoreKit2Framework.PaymentSubscriptionStatus?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "StoreKit2Framework.PaymentSubscriptionStatus?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PaymentSubscriptionStatus",
+                        "printedName": "StoreKit2Framework.PaymentSubscriptionStatus",
+                        "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentManager(im)getSubscriptionStatusWithProductId:completion:",
+            "mangledName": "$s18StoreKit2Framework14PaymentManagerC21getSubscriptionStatus9productId10completionySS_yAA0dgH0CSgctF",
+            "moduleName": "StoreKit2Framework",
+            "isOpen": true,
+            "objc_name": "getSubscriptionStatusWithProductId:completion:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAllSubscriptionStatuses",
+            "printedName": "getAllSubscriptionStatuses(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([StoreKit2Framework.PaymentSubscriptionStatus]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[StoreKit2Framework.PaymentSubscriptionStatus]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PaymentSubscriptionStatus",
+                        "printedName": "StoreKit2Framework.PaymentSubscriptionStatus",
+                        "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentSubscriptionStatus"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentManager(im)getAllSubscriptionStatusesWithCompletion:",
+            "mangledName": "$s18StoreKit2Framework14PaymentManagerC26getAllSubscriptionStatuses10completionyySayAA0dH6StatusCGc_tF",
+            "moduleName": "StoreKit2Framework",
+            "isOpen": true,
+            "objc_name": "getAllSubscriptionStatusesWithCompletion:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           }
@@ -1648,6 +2686,7 @@
         "usr": "c:@M@StoreKit2Framework@objc(cs)PaymentManager",
         "mangledName": "$s18StoreKit2Framework14PaymentManagerC",
         "moduleName": "StoreKit2Framework",
+        "isOpen": true,
         "intro_iOS": "15.0",
         "declAttributes": [
           "AccessControl",
@@ -1731,9 +2770,9 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/yutingli1123\/git\/MAUI.StoreKit2\/StoreKit2Framework\/StoreKit2Framework\/StoreKit2Framework.swift",
+      "filePath": "\/Users\/andrea\/Documents\/GitHub\/MAUI.StoreKit2\/StoreKit2Framework\/StoreKit2Framework\/StoreKit2Framework.swift",
       "kind": "Dictionary",
-      "offset": 2987,
+      "offset": 5177,
       "length": 3,
       "value": "[]"
     }
