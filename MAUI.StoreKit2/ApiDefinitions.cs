@@ -36,6 +36,14 @@ namespace StoreKit2
         [NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
         NSObject WeakDelegate { get; set; }
 
+        // Renewal state
+        [Export("getSubscriptionStatusWithProductId:completion:")]
+        void GetSubscriptionStatus(string productId, Action<PaymentSubscriptionStatus> completion);
+
+        // Bulk version
+        [Export("getAllSubscriptionStatusesWithCompletion:")]
+        void GetAllSubscriptionStatuses(Action<PaymentSubscriptionStatus[]> completion);
+
         /// <summary>
         /// Requests products from the App Store.
         /// </summary>
@@ -196,46 +204,68 @@ namespace StoreKit2
     [DisableDefaultCtor]
     interface PaymentTransaction
     {
-        /// <summary>
-        /// The transaction ID.
-        /// </summary>
-        // @property (readonly, copy, nonatomic) NSString * _Nonnull transactionId;
         [Export("transactionId")]
         string TransactionId { get; }
 
-        /// <summary>
-        /// The product ID.
-        /// </summary>
-        // @property (readonly, copy, nonatomic) NSString * _Nonnull productId;
+        [Export("originalTransactionId")]
+        string OriginalTransactionId { get; }
+
         [Export("productId")]
         string ProductId { get; }
 
-        /// <summary>
-        /// The purchase date.
-        /// </summary>
-        // @property (readonly, copy, nonatomic) NSDate * _Nonnull purchaseDate;
         [Export("purchaseDate", ArgumentSemantic.Copy)]
         NSDate PurchaseDate { get; }
 
-        /// <summary>
-        /// Whether the transaction is upgraded.
-        /// </summary>
-        // @property (readonly, nonatomic) BOOL isUpgraded;
+        [Export("originalPurchaseDate", ArgumentSemantic.Copy)]
+        NSDate OriginalPurchaseDate { get; }
+
+        // Expiration date fixed
+        [NullAllowed, Export("expirationDate", ArgumentSemantic.Copy)]
+        NSDate ExpirationDate { get; }
+
         [Export("isUpgraded")]
         bool IsUpgraded { get; }
 
-        /// <summary>
-        /// The revocation date.
-        /// </summary>
-        // @property (readonly, copy, nonatomic) NSDate * _Nullable revocationDate;
         [NullAllowed, Export("revocationDate", ArgumentSemantic.Copy)]
         NSDate RevocationDate { get; }
 
-        /// <summary>
-        /// The revocation reason.
-        /// </summary>
-        // @property (readonly, copy, nonatomic) NSString * _Nullable revocationReason;
         [NullAllowed, Export("revocationReason")]
         string RevocationReason { get; }
+
+        // If it has intro offers like trial mode
+        [Export("isIntroOffer")]
+        bool IsIntroOffer { get; }
+
+        [Export("ownershipType")]
+        string OwnershipType { get; }
+    }
+
+    [BaseType(typeof(NSObject), Name = "_TtC18StoreKit2Framework25PaymentSubscriptionStatus")]
+    [DisableDefaultCtor]
+    interface PaymentSubscriptionStatus
+    {
+        [Export("productId")]
+        string ProductId { get; }
+
+        [Export("renewalState")]
+        string RenewalState { get; }
+
+        [NullAllowed, Export("expirationDate", ArgumentSemantic.Copy)]
+        NSDate ExpirationDate { get; }
+
+        [Export("isAutoRenewEnabled")]
+        bool IsAutoRenewEnabled { get; }
+
+        [Export("isInBillingRetry")]
+        bool IsInBillingRetry { get; }
+
+        [Export("isInGracePeriod")]
+        bool IsInGracePeriod { get; }
+
+        [NullAllowed, Export("transactionId")]
+        string TransactionId { get; }
+
+        [NullAllowed, Export("willAutoRenewProductId")]
+        string WillAutoRenewProductId { get; }
     }
 }
