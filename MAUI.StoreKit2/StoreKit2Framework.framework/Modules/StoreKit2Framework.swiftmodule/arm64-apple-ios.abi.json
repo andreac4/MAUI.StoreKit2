@@ -2626,8 +2626,7 @@
             "objc_name": "getSubscriptionStatusWithProductId:completion:",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -2676,8 +2675,7 @@
             "objc_name": "getAllSubscriptionStatusesWithCompletion:",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           }

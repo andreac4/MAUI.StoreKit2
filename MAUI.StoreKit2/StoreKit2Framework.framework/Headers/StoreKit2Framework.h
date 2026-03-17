@@ -324,10 +324,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PaymentManag
 - (PaymentProduct * _Nullable)getProductWithProductId:(NSString * _Nonnull)productId SWIFT_WARN_UNUSED_RESULT;
 - (NSArray<PaymentProduct *> * _Nonnull)getAllProducts SWIFT_WARN_UNUSED_RESULT;
 - (void)checkPurchaseStatusWithProductId:(NSString * _Nonnull)productId completion:(void (^ _Nonnull)(BOOL, PaymentTransaction * _Nullable))completion;
-/// Nuovo metodo, non rompe le firme esistenti.
-/// Espone RenewalState e RenewalInfo per una specifica subscription.
 - (void)getSubscriptionStatusWithProductId:(NSString * _Nonnull)productId completion:(void (^ _Nonnull)(PaymentSubscriptionStatus * _Nullable))completion;
-/// Nuovo metodo, utile se vuoi sincronizzare tutte le subscription in un colpo solo.
 - (void)getAllSubscriptionStatusesWithCompletion:(void (^ _Nonnull)(NSArray<PaymentSubscriptionStatus *> * _Nonnull))completion;
 @end
 

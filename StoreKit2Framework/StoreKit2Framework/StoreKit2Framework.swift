@@ -288,8 +288,6 @@ import StoreKit
         }
     }
 
-    /// Nuovo metodo, non rompe le firme esistenti.
-    /// Espone RenewalState e RenewalInfo per una specifica subscription.
     @objc public func getSubscriptionStatus(productId: String, completion: @escaping (PaymentSubscriptionStatus?) -> Void) {
         Task {
             let status = await loadSubscriptionStatus(productId: productId)
@@ -300,7 +298,6 @@ import StoreKit
         }
     }
 
-    /// Nuovo metodo, utile se vuoi sincronizzare tutte le subscription in un colpo solo.
     @objc public func getAllSubscriptionStatuses(completion: @escaping ([PaymentSubscriptionStatus]) -> Void) {
         Task {
             var results: [PaymentSubscriptionStatus] = []
