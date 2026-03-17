@@ -66,13 +66,7 @@ This fork extends the original library with:
 
 ## Installation
 
-### NuGet Package
-
-```bash
-dotnet add package StoreKit2
-```
-
-Or add to your `.csproj` file:
+add to your `.csproj` file:
 
 ```xml
 <PackageReference Include="StoreKit2" Version="1.0.1" />
@@ -380,20 +374,17 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 If you encounter any issues or have questions:
 
-1. Check the [Issues](https://github.com/9khub/MAUI.StoreKit2/issues) page
+1. Check the ISSUE page
 2. Create a new issue with detailed information
 3. Provide sample code and error messages when applicable
 
 ## Author
 
-**Yuting Li**  
-Shanghai Jiuqianji Technology Co., Ltd.
+**Andrea Caoli**  
+from forked repo of Yuting Li - Shanghai Jiuqianji Technology Co., Ltd.
 
 ## Acknowledgments
 
 - Apple's StoreKit2 documentation and samples
 - The .NET MAUI community for guidance and support
-
-## Donation
-
-If you’d like to support this project, you can buy us a coffee at [Buy me a coffee](https://buymeacoffee.com/9khub)
+- Yuting Li - Shanghai Jiuqianji Technology Co., Ltd.
